@@ -21,6 +21,7 @@ router.post('/login', async (req, res) => {
         let existing = await Users.findByUsername(req.body.username)
         if (existing.password === req.body.password) {
             req.session.user = existing;
+            sessionStorage.setItem('session', req.session)
             res.status(200).json(`welcome, ${req.session.user.username}`)
         } else {
             res.status(400).json({ err: 'invalid creds'})
