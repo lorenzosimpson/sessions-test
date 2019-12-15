@@ -1,6 +1,10 @@
 const router = require('express').Router()
 const Users = require('../database/users-model')
 
+router.get('/', (req, res) => {
+    res.send('api up')
+})
+
 router.post('/register', async (req, res) => {
     let user = req.body;
     try {
