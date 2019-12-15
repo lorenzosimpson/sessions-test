@@ -33,7 +33,7 @@ router.post('/login', async (req, res) => {
 
 router.get('/users/:username', async (req, res) => {
     try {
-        if (req.session.user && req.session.user.username === req.params.username) {
+        if (req.session.user) {
             res.status(200).json('hi')
         } else {
             res.status(401).json('forbidden')
