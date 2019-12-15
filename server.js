@@ -24,4 +24,5 @@ server.use(session(sessionConfig))
 server.use(cors())
 server.use('/api', apiRouter)
 
+
 module.exports = server;

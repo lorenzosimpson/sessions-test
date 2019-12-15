@@ -11,6 +11,5 @@ function findByUsername(username) {
 } 
 
 function insert(user) {
-    return db('users').insert(user)
-    
+    return db('users').insert(user)  
 }
